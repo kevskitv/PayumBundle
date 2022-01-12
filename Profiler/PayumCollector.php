@@ -76,7 +76,7 @@ class PayumCollector extends DataCollector implements ExtensionInterface
     /**
      * {@inheritdoc}
      */
-    public function getName()
+    public function getName(): string
     {
         return 'payum';
     }

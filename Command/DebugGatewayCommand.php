@@ -23,7 +23,7 @@ class DebugGatewayCommand extends Command implements ContainerAwareInterface
     /**
      * {@inheritDoc}
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName(static::$defaultName)
@@ -38,7 +38,7 @@ class DebugGatewayCommand extends Command implements ContainerAwareInterface
     /**
      * {@inheritDoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $gateways = $this->getPayum()->getGateways();
 

@@ -21,7 +21,7 @@ class StatusCommand extends Command implements ContainerAwareInterface
     /**
      * {@inheritdoc}
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName(static::$defaultName)
@@ -35,7 +35,7 @@ class StatusCommand extends Command implements ContainerAwareInterface
     /**
      * {@inheritdoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $gatewayName = $input->getArgument('gateway-name');
         $modelClass = $input->getOption('model-class');
