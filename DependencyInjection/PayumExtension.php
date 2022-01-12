@@ -35,7 +35,7 @@ class PayumExtension extends Extension implements PrependExtensionInterface
     /**
      * {@inheritDoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $this->addStorageFactory(new FilesystemStorageFactory);
         $this->addStorageFactory(new DoctrineStorageFactory);
